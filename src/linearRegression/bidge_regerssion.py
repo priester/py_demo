@@ -1,6 +1,6 @@
+# _*_ coding:utf-8 _*_ 
 from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import  RidgeCV
-from sklearn.linear_model import LinearRegression
 
 import pandas as pd
 import numpy as np
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 pd.set_option('display.float_format', lambda x: '%.12f' % x)
 
-data=pd.read_csv("AmesHouse_FE_train.csv")
+data=pd.read_csv("./data/AmesHouse_FE_train.csv")
 
 print(type(data))
 print(data.head())

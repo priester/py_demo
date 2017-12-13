@@ -1,24 +1,19 @@
-# from IPython.display import display
-# from scipy.stats import skew
+# _*_ coding:utf-8 _*_ 
 
 from linearRegression import process_value
-# import matplotlib.pyplot as plt
-# import numpy as np
 import pandas as pd
-# import seaborn as sns
-
 
 # Definitions
-pd.set_option('display.float_format', lambda x: '%.3f' % x)
+pd.set_option('display.float_format', lambda x: '%.6f' % x)
 
-train = pd.read_csv("Ames_House_train.csv")
+train = pd.read_csv("./data/Ames_House_train.csv")
 # train.info()
 
 
 # print(train.head())
 # print(train.describe())
 
-test = pd.read_csv("Ames_House_test.csv")
+test = pd.read_csv("./data/Ames_House_test.csv")
 # test.info()
 
 categorical_features = train.select_dtypes(include = ["object"]).columns
@@ -84,8 +79,8 @@ FE_train.info()
 FE_train = pd.concat([FE_train, train['SalePrice']], axis = 1)
 FE_test = pd.concat([test_id,FE_test], axis = 1)
 
-FE_train.to_csv('AmesHouse_FE_train.csv', index=False)
-FE_test.to_csv('AmesHouse_FE_test.csv', index=False)
+FE_train.to_csv('./data/AmesHouse_FE_train.csv', index=False)
+FE_test.to_csv('./data/AmesHouse_FE_test.csv', index=False)
 
 # FE_train.info()
 

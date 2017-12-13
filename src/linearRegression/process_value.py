@@ -1,3 +1,4 @@
+# _*_ coding:utf-8 _*_ 
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
